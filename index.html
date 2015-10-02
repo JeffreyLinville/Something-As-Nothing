@@ -1,0 +1,54 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Westgate | Something As Nothing</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+    <style>
+        body {
+            background-image: url("img/guitar_lg.png");
+            background-position: center;
+            background-color: #cccccc;
+        }
+    </style>
+    <!--<link rel="stylesheet" href="css/#">-->
+
+</head>
+
+<body>
+    <audio id="homepage_loop" autoplay loop>  <!--maybe move this to head if i can figure a way to better manipulate the controls-->
+        <source src="sounds/homepage_loop.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <header>
+        <h2>Westgate</h2>
+    </header>
+
+    <div id="content">
+        <button id="play_pause" class="#" onclick="play_pause_bgMusic()">Pause</button>
+        <iframe width="420" height="315" allowfullscreen
+                src="http://www.youtube.com/embed/mqWbXcSYcDc?">
+        </iframe>
+
+    </div>
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript">
+        function play_pause_bgMusic(){
+            var music = document.getElementById("homepage_loop");
+            var button = document.getElementById("play_pause");
+            if (music.paused) {
+                music.play();
+                button.innerHTML = "pause"
+            } else {
+                music.pause();
+                button.innerHTML = "play";
+            }
+        }
+    </script>
+    <!--scripts go here-->
+</body>
+</html>
